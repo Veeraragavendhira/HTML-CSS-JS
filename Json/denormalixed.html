@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Normalized</title>
+    <script type="text/javascript">
+        var stud={
+            rno:1001,
+            sname:"Ragav",
+            marks:[100,99,98,97,96,111,1122],
+            workplace:{
+                place1:"Chennai",
+                place2:"Karur",
+                place3:"salem"
+            }
+            
+         }
+        document.write("Student rno 👉🏻 " +stud.rno);
+        document.write("<br> Student Sname 👉🏻 " +stud.sname);
+        //document.write("<br>Marks: " +stud.marks[0]);
+        // document.write("<br>Marks: " +stud.marks[1]);
+        // document.write("<br>Marks: " +stud.marks[2]);
+        // document.write("<br>Marks: " +stud.marks[3]);
+        // document.write("<br>Marks: " +stud.marks[4]);
+        // document.write("<br>Place: " +stud.workplace.place1);
+        // document.write("<br>Place: " +stud.workplace.place2);
+        // document.write("<br>Place: " +stud.workplace.place3);
+        var len=stud.marks.length;
+        for(var i=0; i<len ; i++)
+        {
+            document.write(`<br>mark:${i+1} 👉🏻 ${stud.marks[i]}`)
+        }
+
+        for(var s in stud.workplace)
+        {
+            document.write(`<br>${s} 👉🏻 ${stud.workplace[s]}`)
+            //document.write("<br>"+(s) + stud.workplace[s])
+        }
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

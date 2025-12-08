@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+    <link rel="icon" href="https://wallpapers.com/images/featured/weather-background-97vf5cewmyn865a1.webp">
+    <script>
+            function show()
+            {
+                var cname=document.getElementById("city").value;
+                var api=`https://api.openweathermap.org/data/2.5/weather?q=${cname}&appid=be7c6f6d76d6ca1c7b936a35d5ac2bcd`;
+               // document.getElementById("res").innerHTML=api;
+           fetch(api)
+           .then((response)=>response.json())
+           .then((data)=>{
+                console.log(data);
+                document.getElementById("res1").innerHTML=data.weather[0].main;
+                document.getElementById("res2").innerHTML=data.weather[0].description;
+                document.getElementById("res3").innerHTML=data.wind.speed;
+                document.getElementById("res4").innerHTML=data.main.temp;
+                document.getElementById("res5").innerHTML=data.main.humidity;
+}
+           )                    
+        
+           .catch((err)=>
+                {
+                    console.log(""+err);
+                    document.getElementById("sid").style.display="none";
+                    document.getElementById("res6").innerHTML="CITY NOT FOUND";
+                })    
+            }
+        
+    </script>
+    <style type="text/css">
+        body{
+        background-image: url(https://wallpapers.com/images/featured/weather-background-97vf5cewmyn865a1.webp);
+        background-size: cover;
+    }
+        h1{
+            color: rgb(3, 3, 3);
+            border: 10px rgb(232, 13, 252) ridge    ;
+            padding: 5px;  
+            background-color: transparent;
+            border-radius: 100px;
+        }
+        #sid{
+            background-color: transparent;
+            border: 7px ridge ;
+            width: 40%;
+            text-align: left;
+            color: rgb(0, 255, 0);   
+        }
+        h3{
+            color: rgb(1, 248, 228);
+            padding: 5px;  
+            background-color: red;
+            border-radius: 20%;
+        }
+    </style>
+</head>
+<body>
+       <center>
+
+        <h1>LIVE WEATHER REPORT USING CITY NAME</h1>
+    <h3><marquee behavior="" direction="">DAILY WEATHER REPORT BY RAGAV</marquee></h3>
+        <input type="text" id="city" placeholder="enter city name">
+    <br> 
+    <button onclick="show()">CLICK</button>
+    <div id="res"></div>
+    <div id="sid">
+    Main weather Report:<span id="res1"></span><br>
+    Detailed weather Report:<span id="res2"></span><br>
+    Wind speed: <span id="res3"></span><br>
+    Temperature: <span id="res4"></span><br>
+    Humidity: <span id="res5"></span><br>
+    </div>
+    <div id="res6"></div>
+</center>
+
+
+</body>
+</html>
