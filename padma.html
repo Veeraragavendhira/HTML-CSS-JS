@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padma Sneka | Web Developer</title>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/Z6jV1qhM/file-00000000b17872089946cc918e15e9b7.png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+    scroll-behavior: smooth;
+}
+
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+        /* BODY WITH REAL CARTOON DEV IMAGE */
+        body {
+            padding-top: 80px; /* height of navbar */
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            color: #f2f2f2;
+        
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.75),
+                    rgba(0, 0, 0, 0.85)
+                ),
+                url("https://i.ibb.co/Z6jV1qhM/file-00000000b17872089946cc918e15e9b7.png");
+              background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* NAVBAR */
+        .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+        .navbar h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+
+        /* NAV BUTTONS */
+        .link {
+            display: flex;
+            gap: 18px;
+        }
+
+        .link a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px 22px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .link a:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+        .btn {
+            display: inline-block;
+            margin: 15px 10px;
+            text-decoration: none;
+            color: #ffffff;
+            padding: 12px 26px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+.btn:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+        /* SECTIONS */
+        section {
+            padding: 90px 10%;
+            text-align: center;
+             scroll-margin-top: 100px;
+        }
+
+        h1, h2 {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 15px;
+        }
+
+        /* HOME */
+        #home h1 {
+            font-size: 48px;
+        }
+
+        #home p {
+            font-size: 22px;
+            opacity: 0.85;
+        }
+
+        /* SKILLS */
+        .skill {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 26px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 500;
+        }
+
+        /* CARD STYLE */
+        .card {
+            background: rgba(0, 0, 0, 0.65);
+            padding: 28px;
+            border-radius: 18px;
+            margin: 25px auto;
+            max-width: 900px;
+            text-align: center; /* changed */
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+     ul {
+        list-style: none;
+        padding: 0;
+        }
+
+        ul li {
+        padding: 8px 0;
+        opacity: 0.9;
+        text-align: center;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 25px;
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.6;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(0, 0, 0, 0.6);
+        }
+        #contact a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    #contact a:hover {
+        text-decoration: underline;
+    }
+
+    </style>
+</head>
+
+<body>
+    
+    <!-- NAV -->
+    <nav class="navbar">
+        <h1>Padma Sneka R</h1>
+        <div class="link">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+
+            
+        </div>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home">
+    <h1>Hello, I'm Padma Sneka</h1>
+    <p>Frontend / Web Developer</p>
+
+    <a class="btn"
+       href="https://drive.google.com/file/d/187unDqU_5oNAg1sOY1U2Z6RIOygCbgI5/view?usp=drive_link"
+       target="_blank">
+       View Resume
+    </a>
+
+    <a class="btn"
+       href="https://github.com/Padmasnekaravi"
+       target="_blank">
+       Visit GitHub
+    </a>
+</section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="card">
+            <p>
+                Enthusiastic Web Developer with strong frontend fundamentals.
+                Focused on building clean, responsive, and user-friendly web
+                applications with continuous learning.
+            </p>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">MongoDB</div>
+        <div class="skill">Git & GitHub</div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="card">
+            <h3>File Transfer System Using Elliptic Curve Cryptography</h3>
+            <p>
+                Secure file transfer system built using Python and MongoDB,
+                focusing on encryption and data protection.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Hospital Management System</h3>
+            <p>
+                PHP & MySQL based application to manage hospital records
+                and administrative workflows.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Open Weather App</h3>
+            <p>
+                React-based application using OpenWeather API to display
+                real-time weather data with responsive UI.
+            </p>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="card">
+            <ul>
+                <li>M.Sc Computer Science (2021 – 2023)</li>
+                <li>Government College For Women (A), Kumbakonam</li>
+                <li>CGPA: 8.3</li>
+            </ul>
+        </div>
+    </section>
+
+   <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+        <ul>
+            <li>
+                📧
+                <a href="mailto:snekaravi24@gmail.com">
+                    snekaravi24@gmail.com
+                </a>
+            </li>
+
+            <li>
+                📞
+                <a href="tel:+919025325072">
+                    +91 90253 25072
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Padma Sneka R |💙| Full Stack Web Developer
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram Story - Grand Opening</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #050b18;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+  }
+
+  /* 9:16 Aspect Ratio Canvas */
+  .story-card {
+    width: 360px;
+    height: 640px;
+    background: radial-gradient(circle at center, #11254a 0%, #0B1B3D 70%, #07122b 100%);
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    position: relative;
+    overflow: hidden;
+    color: #cef103;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 24px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+  }
+
+  /* Outer Ornamental Border */
+  .border-frame {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 10px;
+    pointer-events: none;
+  }
+
+  .border-frame::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border: 1px dashed rgba(212, 175, 55, 0.25);
+    border-radius: 6px;
+  }
+
+  /* Header Section */
+  .header {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .sparkle {
+    color: #D4AF37;
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 6px;
+  }
+
+  .opening-tag {
+    color: #D4AF37;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  /* Title */
+  .title-container {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .title-main {
+    font-family: 'Cinzel', serif;
+    color: #D4AF37;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+  }
+
+  .title-sub {
+    font-family: 'Cinzel', serif;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 4px;
+  }
+
+  /* Divider */
+  .gold-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+    width: 80%;
+    margin: 12px auto;
+  }
+
+  /* Date & Event Details */
+  .event-badge {
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid #D4AF37;
+    border-radius: 20px;
+    padding: 8px 14px;
+    text-align: center;
+    margin: 0 auto 12px;
+    width: fit-content;
+  }
+
+  .date-text {
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .location {
+    text-align: center;
+    font-size: 11px;
+    color: #E0E0E0;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  .location-icon {
+    color: #D4AF37;
+    margin-right: 4px;
+  }
+
+  /* Features List */
+  .features-box {
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 2px solid #D4AF37;
+    padding: 10px 14px;
+    margin: 10px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .feature-item {
+    font-size: 11px;
+    margin: 5px 0;
+    color: #F0F0F0;
+    display: flex;
+    align-items: center;
+  }
+
+  .bullet {
+    color: #D4AF37;
+    margin-right: 8px;
+    font-size: 12px;
+  }
+
+  /* Delivery Badge */
+  .delivery-tag {
+    text-align: center;
+    background: linear-gradient(90deg, #D4AF37 0%, #F3E5AB 50%, #D4AF37 100%);
+    color: #0B1B3D;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 6px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin: 8px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+
+  /* Contact Footer */
+  .contact-section {
+    text-align: center;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    padding-top: 10px;
+  }
+
+  .contact-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .contact-link {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+  .contact-highlight {
+    color: #D4AF37;
+  }
+
+  .welcome-note {
+    font-family: 'Cinzel', serif;
+    color: #D4AF37;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<div class="story-card">
+  <div class="border-frame"></div>
+
+  <!-- Top Header -->
+  <div class="header">
+    <div class="sparkle">✨ ✨ ✨</div>
+    <div class="opening-tag">Grand Opening Ceremony</div>
+  </div>
+
+  <!-- Main Store Name -->
+  <div class="title-container">
+    <div class="title-main">New Nellai</div>
+    <div class="title-main">Ponsakthi</div>
+    <div class="title-sub">STORES</div>
+  </div>
+
+  <!-- Date & Venue -->
+  <div>
+    <div class="gold-divider"></div>
+    <div class="event-badge">
+      <span class="date-text">🗓️ WEDNESDAY, AUG 19, 2026</span>
+    </div>
+    <div class="location">
+      <span class="location-icon">📍</span><strong>C.S.I. Campus</strong>, Church Corner,<br>Karur – 639 001
+    </div>
+    <div class="gold-divider"></div>
+  </div>
+
+  <!-- Features -->
+  <div>
+    <div class="features-box">
+      <div class="feature-item"><span class="bullet">◆</span> All Groceries & Household Essentials</div>
+      <div class="feature-item"><span class="bullet">◆</span> Wholesale & Retail Availability</div>
+      <div class="feature-item"><span class="bullet">◆</span> Premium Quality at Lowest Prices</div>
+    </div>
+
+    <div class="delivery-tag">
+      🚚 Door Delivery Available 🚚
+    </div>
+  </div>
+
+  <!-- Footer / Contact -->
+  <div class="contact-section">
+    <div class="contact-row">
+      <span>📞 <span class="contact-highlight">9940211185</span></span>
+      <span>|</span>
+      <span>💬 WhatsApp: <span class="contact-highlight">9940311185</span></span>
+    </div>
+    <div class="welcome-note">Warmly Welcoming You All!</div>
+  </div>
+</div>
+
+</body>
+</html>

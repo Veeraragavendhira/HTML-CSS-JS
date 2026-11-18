@@ -1,0 +1,9 @@
+function Hello() {
+  return <div>
+  <h1>Hello</h1>
+</div>
+}
+
+<Hello/>
+export default Hello
+ 
