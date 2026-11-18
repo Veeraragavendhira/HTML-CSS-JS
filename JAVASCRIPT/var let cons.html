@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,4 +45,36 @@ console.log("Form submitted");
 </form>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAR LET CONST</title>
+    <script type="text/javascript">
+        if(true)
+    {
+        var a=100;
+        let b=200; //local variable works only inside block
+        const c=300; //local variable works only inside block
+        a=a=b;
+        b=b+a;
+        document.write("<br>" +a)
+    //    c=c+10;
+        document.write("<br>" +b)
+        document.write("<br>" +c)
+        c=c+10;//returnerror in console because the value of c is const.
+    }
+
+        document.write("<br>" +a)
+        document.write("<br>" +b)//local variable outside the block it  won't print
+        document.write("<br>" +c)//local variable outside the block it  won't print
+
+    </script>
+</head>
+<body>
+    
+</body>
+>>>>>>> b0fe9d65b0f398b6c9b81b3b9da75f013a2080cc
 </html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  < style type ="text/css">
         h1{
             background-color: bisque;
@@ -18,4 +19,26 @@
             border: 100px ridge black;
             /* inset outset double ridge none  */
         }
+=======
+ < style type ="text/css">
+        h1{
+            background-color: bisque;
+            color: blue;
+        }
+        #a1{
+            background-color: black;
+            color: antiquewhite;
+        }
+        h2{
+            background-color: chartreuse;
+            color: rgb(44, 8, 247); 
+            border: 10px double yellow;
+        }
+        {
+            border-radius: 10%;
+            background-color: blue;
+            border: 100px ridge black;
+            /* inset outset double ridge none  */
+        }
+>>>>>>> b0fe9d65b0f398b6c9b81b3b9da75f013a2080cc
     </style>
